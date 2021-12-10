@@ -1,6 +1,9 @@
 const numbers = process.argv.slice(2);
 const colors = require('colors');
 
+// console.log(numbers);
+
+
 const a = +numbers[0];
 const b = +numbers[1];
 
@@ -16,6 +19,12 @@ if ( (a > b)) {
     start = b;
     finish = a;
 }
+
+// console.log(a);
+// console.log(b);
+
+// console.log(start);
+// console.log(finish);
 
 const green = "green";
 const yellow = "yellow";
