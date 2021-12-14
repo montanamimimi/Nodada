@@ -6,11 +6,18 @@ const EventEmitter = require('events');
 const emitter = new EventEmitter();
 
 // To start write "npm run timer %timer1% %timer2%" where timer is 11-11-11-1111 hour-day-month-year
+// for example npm run timer 17-14-12-2019 13-14-12-2021
 
 const dates = process.argv.slice(2);
 
 let toDate1 = dates[0];
 let toDate2 = dates[1];
+
+if ( !toDate1 || !toDate2 ) {
+    console.log('Something wrond with dates');
+    return;
+}
+
 
 toDate1 = toDate1.split('-');
 toDate2 = toDate2.split('-');
