@@ -45,6 +45,7 @@ const run = async () => {
 
     if (item.isDir) {
         currentDirectory = item.path;
+        console.log(item.path);
         return await run();
     } else {
         const data = await fs.readFile(item.path, 'utf-8');
