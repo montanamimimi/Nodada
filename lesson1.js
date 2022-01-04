@@ -1,13 +1,11 @@
 const numbers = process.argv.slice(2);
 const colors = require('colors');
 
-// console.log(numbers);
-
 
 const a = +numbers[0];
 const b = +numbers[1];
 
-let start = a;
+let start = -10;
 let finish = b;
 
 if ( isNaN(a) || isNaN(b) ) {
@@ -41,7 +39,7 @@ for (let i = start; i <= finish; i++) {
             flag = false;
         }
     }
-    if (flag && i !== 1) {        
+    if (flag && i > 1) {        
         notEmpty = true;
         if (color === green) {
             console.log(colors.green(i));     
